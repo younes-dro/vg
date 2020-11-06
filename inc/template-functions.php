@@ -62,29 +62,6 @@ function get_menu_card_nav() {
     return $html;
 }
 
-function get_subcats() {
-    add_filter('terms_clauses', function ( $pieces, $taxonomies, $args ) {
-
-        if (!isset($args['wpse_exclude_top']) || 1 !== $args['wpse_exclude_top']
-        )
-            return $pieces;
-
-        $pieces['where'] .= ' AND tt.parent > 0';
-
-        return $pieces;
-    }, 10, 3);
-
-    $terms = get_terms('category_aliment', ['wpse_exclude_top' => 1]);
-    if ($terms && !is_wp_error($terms)
-    ) {
-        echo '<ul>';
-        foreach ($terms as $term) {
-            echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
-        }
-        echo '</ul>';
-    }
-}
-
 function get_menu_card() {
 
     $html = '';
@@ -103,14 +80,13 @@ function get_menu_card() {
                 $html .= '<div class="aliment-details-wrapper">';
                 $html .= '<div class="aliment-details">';
                 foreach ($aliments as $aliment) {
-                    $html .= '<div>';
+
                     $featured_img_url = get_the_post_thumbnail_url($aliment->ID, 'post-thumbnail');
                     $price = get_field('prix', $aliment->ID);
                     $html .= '<img src ="' .$featured_img_url. '" />';
                     $html .= '<span class="aliment-title">' . $aliment->post_title . '</span>';
                     $html .= '<span class="aliment-price">'.$price.' dh</span>';
-                    
-                    $html .= '</div>';
+
                 }
                 $html .= '</div>';
                 $html .= '</div>';
@@ -121,14 +97,12 @@ function get_menu_card() {
             $html .= '<div class="aliment-details-wrapper">';
             $html .= '<div class="aliment-details">';
             foreach ($aliments as $aliment) {
-                    $html .= '<div>';
                     $featured_img_url = get_the_post_thumbnail_url($aliment->ID , 'post-thumbnail');
                     $price = get_field('prix', $aliment->ID);
                     $html .= '<img src ="' .$featured_img_url. '" />';
                     $html .= '<span class="aliment-title">' . $aliment->post_title . '</span>';
                     $html .= '<span class="aliment-price">'.$price.' dh</span>';
                     
-                    $html .= '</div>';
             }
             $html .= '</div>';
             $html .= '</div>';

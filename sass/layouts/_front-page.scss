@@ -120,46 +120,30 @@ body.home{
                     padding-top: 20px;
                     padding-bottom: 20px;
                     margin: 5px auto;
-                    height: 200px;
-                }
-                div.aliment-details{
-                    margin: 50px auto;
-                    /*background-color: #c5c523;*/
-                    width: 200px;
-                    margin: 0 auto;
-                    text-align: center;
-                    border: 1px solid #00F;
-                    float: none;
-                    min-height: 150px;
-                    @media screen and (min-width:600px){
-                        width:600px;
-                    }
-                    .slick-prev {
-                       left :  -36px;
-                    }
-                    .slick-next{
-                        right: -36px;
-                    }
-                    .slick-prev:before, .slick-next:before{
-                        color: #000;
-                    }
-                    .slick-slide img {
-                        display: block;
-                        width: 80px;
-                        border: 1px solid;
-                        min-width: 80px;
+
+                    div.aliment-details{
+                        margin: 50px auto;
+                        /*background-color: #c5c523;*/
+                        width: 200px;
                         margin: 0 auto;
-                    }
-                    span.aliment-title{
-                        color: #ba1400;
-                        font-size: 16px;
-                        line-height: 1.2;
-                        display: block;
-                    }
-                    span.aliment-price{
-                        color: #000;
-                        font-size: 14px;
-                        display: block;
+                        text-align: center;
+                        border: 1px solid #00F;
+                        float: none;
+                        /*min-height: 150px;*/
+                        @media screen and (min-width:600px){
+                            width:600px;
+                        }
+                        span.aliment-title{
+                            color: #ba1400;
+                            font-size: 16px;
+                            line-height: 1.2;
+                            display: block;
+                        }
+                        span.aliment-price{
+                            color: #000;
+                            font-size: 14px;
+                            display: block;
+                        }
                     }
                 }
             }
