@@ -1,0 +1,169 @@
+body.home{
+    position: relative;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7e8d0;
+    @media screen and (min-width:992px){
+        background: #f7e8d0 url(assets/images/body-bg.png) top center repeat-x;
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            max-width: 1200px;
+            height: 213px;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            background: url(assets/images/header-bg.png) top center no-repeat;
+            z-index: -1;
+            border: 1px solid #000;
+        }
+    }
+    header.site-header{
+        height:auto;
+        @media screen and (min-width:992px){
+            height: 265px;
+        }
+        nav.main-navigation{
+            background: url('assets/images/main-menu.png') repeat;
+        }
+    }
+    div.site-content{
+        padding-top: 45px;
+        /*background: #fff;*/
+        h1.page-title{
+            float: none;
+            margin: 30px 0;
+            text-align: center;
+            color: #321a0a;
+            font-weight: normal;
+            font-size: 30px;
+            font-family: Georgia, sans-serif;            
+        }
+        main.site-main{
+            background-color: #fff;
+            @media screen and (min-width:992px){
+                width:980px;
+                margin:0 auto;
+            }
+        }
+        div.button-group{
+            text-align: center;
+            margin:5px 0;
+            button.button{
+                display: inline-block;
+                margin: 0 5px 10px;
+                padding: 0 10px;
+                border: 2px solid #e0caa6;
+                background-color: #fff;
+                min-width: 140px;
+                min-height: 34px;
+                font-size: 12px;
+                cursor: pointer;
+                &:hover{
+                    background-color: #e0caa6;
+                }
+            }
+        }
+        div.menu-card-wrapper{
+            position: relative;
+            margin: 25px 0;
+            padding-bottom: 20px;
+            overflow: hidden;
+            background: #fff;
+            width: 96%;
+            padding-left: 10px;           
+            div.menu-card{
+                /*border: 1px solid #0f0;*/
+                div.col-menu{
+                    min-width: 100%;
+                    .parent-cat-title{
+                        padding: 12px 20px;
+                        margin-bottom: 30px;
+                        background: #f3e9d8;
+                        font-size: 18px;
+                        color: #321a0a;
+                        font-family: Georgia, sans-serif; 
+                    }
+                    .child-cat-title{
+                        position: relative;
+                        background: none;
+                        padding-left: 0;
+                        font-size: 14px;
+                        color: #321a0a;
+                        font-family: Georgia, sans-serif; 
+                        &:before{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            width: 100%;
+                            height: 4px;
+                            margin-top: -1px;
+                            background: #f3e9d8;
+                        }
+
+                        span{
+                            position: relative;
+                            z-index: 1;
+                            padding-right: 15px;
+                            background: #fff;                            
+                        }
+                    }
+
+                }
+                div.aliment-details-wrapper{
+                    /*background-color: #f00;*/
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin: 5px auto;
+                    height: 200px;
+                }
+                div.aliment-details{
+                    margin: 50px auto;
+                    /*background-color: #c5c523;*/
+                    width: 200px;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid #00F;
+                    float: none;
+                    min-height: 150px;
+                    @media screen and (min-width:600px){
+                        width:600px;
+                    }
+                    .slick-prev {
+                       left :  -36px;
+                    }
+                    .slick-next{
+                        right: -36px;
+                    }
+                    .slick-prev:before, .slick-next:before{
+                        color: #000;
+                    }
+                    .slick-slide img {
+                        display: block;
+                        width: 80px;
+                        border: 1px solid;
+                        min-width: 80px;
+                        margin: 0 auto;
+                    }
+                    span.aliment-title{
+                        color: #ba1400;
+                        font-size: 16px;
+                        line-height: 1.2;
+                        display: block;
+                    }
+                    span.aliment-price{
+                        color: #000;
+                        font-size: 14px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+}

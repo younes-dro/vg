@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/*!
+Theme Name: VG VIZIGAN Restaurant
+Theme URI: https://github.com/younes-dro/
+Description: Custom theme for VIZIGAN Restaurant-café
+Author: Younés DRO
+Author URI: http://www.dro.123.fr
+Template: dro-caterer
+Version: 1.0.0
+Text Domain: vg
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/*--------------------------------------------------------------
+## Body 
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Headers
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Breadcrumbs
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Heading ( h1,h2,h3,h4,h5,h6)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Main Menu
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Paragraph
+--------------------------------------------------------------*/
+/**
+ * Dro Caterer: Sliding Mobile Menu
+ */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Elements
+# Styling Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body.wp_mm_enable {
+  overflow: hidden;
+}
+
+.body_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.body_overlay.enabled {
+  display: block;
+  opacity: 1;
+}
+
+.wp_mm_wrapper {
+  height: calc(100vh - 45px);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: fixed;
+  right: -300px;
+  bottom: 0;
+  z-index: -9;
+  width: 300px;
+  opacity: 0;
+  background: url(assets/images/main-menu.png);
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: right 0.5s;
+  /*box-sh*/
+}
+
+.wp_mm_wrapper.active {
+  z-index: 999;
+  opacity: 1;
+  right: 0;
+}
+
+.wp_mm_wrapper ul.menu > li > a {
+  color: #000;
+  font-weight: 600;
+}
+
+.wp_mm_wrapper ul.menu {
+  position: relative;
+  display: none;
+  margin: 0 0 0 2px;
+}
+
+.wp_mm_wrapper.active ul.menu {
+  display: block;
+}
+
+.wp_mm_wrapper ul.menu li.back a {
+  font-size: 13px;
+  width: 50%;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.wp_mm_wrapper ul.menu a {
+  display: block;
+  color: #fff;
+  padding: 20px 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.wp_mm_wrapper ul.menu .sub-menu {
+  background-color: #000000;
+  height: 100%;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  z-index: 999;
+}
+
+.wp_mm_wrapper ul.menu li.active > .sub-menu {
+  right: 0;
+}
+
+.wp_mm_wrapper ul.menu li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #9f1400 20%, #9f1400 50%, #9f1400 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+  color: #000;
+  height: 60px;
+}
+
+.wp_mm_wrapper ul.menu li.menu-item-has-children > a {
+  width: 50%;
+}
+
+.wp_mm_wrapper ul.menu li.menu-item-has-children span {
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid;
+  width: 50px;
+  line-height: 1rem;
+  text-align: center;
+}
+
+span.forward {
+  float: right;
+  margin: 20px 10px 0 0;
+}
+
+span.left {
+  float: left;
+  margin: 20px 0 0 20px;
+}
+
+#toggle-menu-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  background: #9f1400;
+  transition: width 1s;
+}
+
+#toggle-menu {
+  cursor: pointer;
+  /*float: right;*/
+  height: 45px;
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  z-index: 9999;
+  background: url(assets/images/main-menu.png);
+}
+
+#toggle-menu span {
+  background-color: #44120b;
+  border-radius: 5px;
+  display: block;
+  height: 2px;
+  left: 8px;
+  width: 45px;
+  opacity: 1;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+#toggle-menu span:nth-child(1) {
+  top: 5px;
+}
+
+#toggle-menu span:nth-child(2),
+#toggle-menu span:nth-child(3) {
+  top: 20px;
+}
+
+#toggle-menu span:nth-child(4) {
+  top: 35px;
+}
+
+#toggle-menu.open span:nth-child(1) {
+  left: 50%;
+  top: 18px;
+  width: 0;
+}
+
+#toggle-menu.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#toggle-menu.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#toggle-menu.open span:nth-child(4) {
+  left: 50%;
+  top: 18px;
+  width: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #toggle-menu-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wp_mm_wrapper,
+#toggle-menu,
+.body_overlay,
+.body_overlay.enabled,
+#toggle-menu-container {
+    display: none;
+  }
+
+  body.wp_mm_enable {
+    overflow: visible;
+  }
+}
+/*--------------------------------------------------------------
+# Styling Navigation
+--------------------------------------------------------------*/
+.wp_mm_wrapper ul.menu li:hover > a {
+  color: #9f1400;
+}
+
+.wp_mm_wrapper .current_page_item > a,
+.wp_mm_wrapper .current-menu-item > a,
+.wp_mm_wrapper .current_page_item > a:hover,
+.wp_mm_wrapper .current-menu-item > a:hover {
+  color: #313131;
+  border-left: 2px solid #7ac1b7;
+}
+
+@media screen and (max-width: 576px) {
+  .wp_mm_wrapper {
+    width: 250px;
+  }
+
+  .wp_mm_wrapper ul.menu li.menu-item-has-children > a {
+    width: 70%;
+  }
+
+  .wp_mm_wrapper ul.menu li.back a {
+    font-size: 12px;
+    width: 100%;
+    margin: 0px 0 0 80px;
+    /*background-color: #2a2a2a;*/
+    padding: 25px 0px 20px 0;
+  }
+
+  .wp_mm_wrapper ul.menu li.menu-item-has-children span {
+    font-size: 24px;
+    cursor: pointer;
+    /*background-color: #7ac1b7;*/
+    width: 45px;
+    height: 45px;
+    line-height: 1rem;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .wp_mm_wrapper li.menu-item-has-children span.left {
+    float: left;
+    margin: 10px 0 0 20px;
+  }
+
+  .wp_mm_wrapper li.menu-item-has-children span.forward {
+    margin: 10px 5px 0 0;
+  }
+}
+body.home {
+  position: relative;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7e8d0;
+}
+@media screen and (min-width: 992px) {
+  body.home {
+    background: #f7e8d0 url(assets/images/body-bg.png) top center repeat-x;
+  }
+  body.home:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 1200px;
+    height: 213px;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background: url(assets/images/header-bg.png) top center no-repeat;
+    z-index: -1;
+    border: 1px solid #000;
+  }
+}
+body.home header.site-header {
+  height: auto;
+}
+@media screen and (min-width: 992px) {
+  body.home header.site-header {
+    height: 265px;
+  }
+}
+body.home header.site-header nav.main-navigation {
+  background: url("assets/images/main-menu.png") repeat;
+}
+body.home div.site-content {
+  padding-top: 45px;
+  /*background: #fff;*/
+}
+body.home div.site-content h1.page-title {
+  float: none;
+  margin: 30px 0;
+  text-align: center;
+  color: #321a0a;
+  font-weight: normal;
+  font-size: 30px;
+  font-family: Georgia, sans-serif;
+}
+body.home div.site-content main.site-main {
+  background-color: #fff;
+}
+@media screen and (min-width: 992px) {
+  body.home div.site-content main.site-main {
+    width: 980px;
+    margin: 0 auto;
+  }
+}
+body.home div.site-content div.button-group {
+  text-align: center;
+  margin: 5px 0;
+}
+body.home div.site-content div.button-group button.button {
+  display: inline-block;
+  margin: 0 5px 10px;
+  padding: 0 10px;
+  border: 2px solid #e0caa6;
+  background-color: #fff;
+  min-width: 140px;
+  min-height: 34px;
+  font-size: 12px;
+  cursor: pointer;
+}
+body.home div.site-content div.button-group button.button:hover {
+  background-color: #e0caa6;
+}
+body.home div.site-content div.menu-card-wrapper {
+  position: relative;
+  margin: 25px 0;
+  padding-bottom: 20px;
+  overflow: hidden;
+  background: #fff;
+  width: 96%;
+  padding-left: 10px;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card {
+  /*border: 1px solid #0f0;*/
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu {
+  min-width: 100%;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .parent-cat-title {
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  background: #f3e9d8;
+  font-size: 18px;
+  color: #321a0a;
+  font-family: Georgia, sans-serif;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-title {
+  position: relative;
+  background: none;
+  padding-left: 0;
+  font-size: 14px;
+  color: #321a0a;
+  font-family: Georgia, sans-serif;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-title:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  margin-top: -1px;
+  background: #f3e9d8;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-title span {
+  position: relative;
+  z-index: 1;
+  padding-right: 15px;
+  background: #fff;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper {
+  /*background-color: #f00;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 5px auto;
+  height: 200px;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details {
+  margin: 50px auto;
+  /*background-color: #c5c523;*/
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #00F;
+  float: none;
+  min-height: 150px;
+}
+@media screen and (min-width: 600px) {
+  body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details {
+    width: 600px;
+  }
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-prev {
+  left: -36px;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-next {
+  right: -36px;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-prev:before, body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-next:before {
+  color: #000;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-slide img {
+  display: block;
+  width: 80px;
+  border: 1px solid;
+  min-width: 80px;
+  margin: 0 auto;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details span.aliment-title {
+  color: #ba1400;
+  font-size: 16px;
+  line-height: 1.2;
+  display: block;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details span.aliment-price {
+  color: #000;
+  font-size: 14px;
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
