@@ -51,19 +51,45 @@
 
 
 
-    /* Stick navigation and scroll top on window scrolling  */
+        /* Stick navigation and scroll top on window scrolling  */
 
-    var stickyNavTop = $('.button-group').offset().top;
-    $(window).scroll(function () {
-        var scrollToTop = $(window).scrollTop(); 
+        var stickyNavTop = $('.button-group').offset().top;
+        $(window).scroll(function () {
+            var scrollToTop = $(window).scrollTop();
 
-        if (scrollToTop > stickyNavTop) {
-            $('.button-group').addClass('sticky-menu-nav');
-        } else {
-            $('.button-group').removeClass('sticky-menu-nav');
-        }
+            if (scrollToTop > stickyNavTop) {
+                $('.button-group').addClass('sticky-menu-nav');
+            } else {
+                $('.button-group').removeClass('sticky-menu-nav');
+            }
 
-    });
+        });
+        $('div.button-group button').on('click', function () {
+
+            if ($('div.button-group').hasClass('sticky-menu-nav')) {
+//                console.log('ticky');
+                $("body,html").animate(
+                        {
+                            scrollTop: $("div.menu-card-wrapper").offset().top
+                        },
+                500, function () {
+//                    $('.button-group').addClass('sticky-menu-nav');
+                }
+                );
+            }
+        });
+        /* Main Menu Scroll */
+        $('ul.menu a').on('click', function (e) {
+            e.preventDefault();
+            $linkTo = $(this).attr('href');
+//            console.log($linkTo);
+            $("body,html").animate(
+                    {
+                        scrollTop: $($linkTo).offset().top - 150
+                    },
+            500
+                    );
+        });
     });
 
 })(jQuery);
