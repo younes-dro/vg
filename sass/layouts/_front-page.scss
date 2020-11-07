@@ -74,7 +74,7 @@ body.home{
             overflow: hidden;
             background: #fff;
             width: 96%;
-            padding-left: 10px;           
+            padding-left: 10px;
             div.menu-card{
                 /*border: 1px solid #0f0;*/
                 div.col-menu{
@@ -124,30 +124,81 @@ body.home{
                     div.aliment-details{
                         margin: 50px auto;
                         /*background-color: #c5c523;*/
-                        width: 200px;
+                        /*width: 200px;*/
                         margin: 0 auto;
                         text-align: center;
-                        border: 1px solid #00F;
+                        /*border: 1px solid #00F;*/
                         float: none;
                         /*min-height: 150px;*/
                         @media screen and (min-width:600px){
                             width:600px;
                         }
-                        span.aliment-title{
-                            color: #ba1400;
-                            font-size: 16px;
-                            line-height: 1.2;
-                            display: block;
-                        }
-                        span.aliment-price{
-                            color: #000;
-                            font-size: 14px;
-                            display: block;
+                        div.desc{
+                            /*background-color: #f0f;*/
+                            margin-bottom: 10px;
+
+                            img{
+                                max-width: 90px;
+                                height: auto;
+                                /*float: left;*/
+                                /*margin-right: 10px;*/
+                            }
+                            div.txt{
+                                background-color: #fff;
+                                text-align: left;
+                                span.aliment-title{
+                                    margin-bottom: 8px;
+                                    color: #ba1400;
+                                    font-size: 16px;
+                                    line-height: 1.2;
+                                    display: block;
+
+                                }
+                                p{
+                                    display: inline-block;
+                                    /* max-height: 56px; */
+                                    overflow: hidden;
+                                    color: #534841;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    text-align: left;
+                                    line-height: 1.4;
+                                    font-size: 13px;
+                                }
+                                span.aliment-price{
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 100%;
+                                    text-align: right;
+                                    background: url(assets/images/price-dot.gif) repeat-x 0 10px;
+                                    span.amount{
+                                        position: relative;
+                                        top: -3px;
+                                        margin: 0;
+                                        padding: 0;
+                                        background: #fff;
+                                        color: #322822;
+                                        font-size: 18px;
+                                        line-height: 1;
+                                        font-family: Georgia, serif;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
-
+    .sticky-menu-nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        z-index: 9999;
+        margin: 0 auto!important;
+        padding-top: 18px;
+        padding-bottom: 5px;
+    }
 }

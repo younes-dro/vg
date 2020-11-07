@@ -48,6 +48,22 @@
             });
         }
 
+
+
+
+    /* Stick navigation and scroll top on window scrolling  */
+
+    var stickyNavTop = $('.button-group').offset().top;
+    $(window).scroll(function () {
+        var scrollToTop = $(window).scrollTop(); 
+
+        if (scrollToTop > stickyNavTop) {
+            $('.button-group').addClass('sticky-menu-nav');
+        } else {
+            $('.button-group').removeClass('sticky-menu-nav');
+        }
+
+    });
     });
 
 })(jQuery);

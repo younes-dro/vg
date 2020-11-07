@@ -455,49 +455,82 @@ body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-detai
   padding-top: 20px;
   padding-bottom: 20px;
   margin: 5px auto;
-  height: 200px;
 }
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details {
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details {
   margin: 50px auto;
   /*background-color: #c5c523;*/
-  width: 200px;
+  /*width: 200px;*/
   margin: 0 auto;
   text-align: center;
-  border: 1px solid #00F;
+  /*border: 1px solid #00F;*/
   float: none;
-  min-height: 150px;
+  /*min-height: 150px;*/
 }
 @media screen and (min-width: 600px) {
-  body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details {
+  body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details {
     width: 600px;
   }
 }
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-prev {
-  left: -36px;
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc {
+  /*background-color: #f0f;*/
+  margin-bottom: 10px;
 }
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-next {
-  right: -36px;
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc img {
+  max-width: 90px;
+  height: auto;
+  /*float: left;*/
+  /*margin-right: 10px;*/
 }
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-prev:before, body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-next:before {
-  color: #000;
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc div.txt {
+  background-color: #fff;
+  text-align: left;
 }
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details .slick-slide img {
-  display: block;
-  width: 80px;
-  border: 1px solid;
-  min-width: 80px;
-  margin: 0 auto;
-}
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details span.aliment-title {
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc div.txt span.aliment-title {
+  margin-bottom: 8px;
   color: #ba1400;
   font-size: 16px;
   line-height: 1.2;
   display: block;
 }
-body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details span.aliment-price {
-  color: #000;
-  font-size: 14px;
-  display: block;
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc div.txt p {
+  display: inline-block;
+  /* max-height: 56px; */
+  overflow: hidden;
+  color: #534841;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  line-height: 1.4;
+  font-size: 13px;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc div.txt span.aliment-price {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  background: url(assets/images/price-dot.gif) repeat-x 0 10px;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper div.aliment-details div.desc div.txt span.aliment-price span.amount {
+  position: relative;
+  top: -3px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #322822;
+  font-size: 18px;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+body.home .sticky-menu-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  margin: 0 auto !important;
+  padding-top: 18px;
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
