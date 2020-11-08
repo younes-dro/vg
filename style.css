@@ -288,6 +288,25 @@ span.left {
   border-left: 2px solid #7ac1b7;
 }
 
+body.home .wp_mm_wrapper ul.menu img.custom-logo {
+  max-width: 60px;
+  margin: 0 auto;
+  width: 60px;
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+body.home .wp_mm_wrapper ul.phone-numbers {
+  border: none;
+}
+body.home .wp_mm_wrapper ul.phone-numbers li {
+  margin-bottom: 2px;
+}
+body.home .wp_mm_wrapper ul.phone-numbers li a i.fa, body.home .wp_mm_wrapper ul.phone-numbers li a span.phone-number {
+  font-size: 16px;
+}
+
 @media screen and (max-width: 576px) {
   .wp_mm_wrapper {
     width: 250px;
@@ -373,6 +392,9 @@ body.home header.site-header .custom-logo-link {
   body.home header.site-header .custom-logo-link {
     max-width: 100px;
   }
+}
+body.home header.site-header .custom-logo-link img {
+  border-radius: 17%;
 }
 body.home header.site-header nav.main-navigation {
   background: url("assets/images/main-menu.png") repeat;
@@ -582,6 +604,25 @@ body.home .sticky-menu-nav {
     transform: translateY(0);
   }
 }
+body.home div.commande-wrapper {
+  background-color: #fff;
+}
+body.home div.commande-wrapper p {
+  font-size: 14px;
+  padding-top: 20px;
+  text-align: left;
+}
+@media screen and (min-width: 992px) {
+  body.home div.commande-wrapper p {
+    font-size: 20px;
+  }
+}
+body.home div.commande-wrapper h2 {
+  font-size: 18px;
+  text-align: center;
+  /* border: 1px solid; */
+  padding: 19px 0px;
+}
 body.home div.adresse-wrapper {
   background-color: #fff;
   padding-top: 20px;
@@ -593,6 +634,30 @@ body.home div.adresse-wrapper {
     padding-bottom: 50px;
   }
 }
+body.home div.adresse-wrapper h1 {
+  font-size: 26px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: #7b0000;
+}
+@media screen and (min-width: 992px) {
+  body.home div.adresse-wrapper h1 {
+    font-size: 40px;
+  }
+}
+body.home div.adresse-wrapper h3 {
+  font-size: 24px;
+  text-align: center;
+  color: #6b0000;
+  padding-bottom: 10px;
+}
+body.home div.adresse-wrapper h5 {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
 body.home footer.site-footer {
   padding: 2rem;
   width: 100%;
@@ -601,6 +666,25 @@ body.home footer.site-footer {
   border-top: 8px solid #801101;
   background: #9c1400;
   color: #fff;
+}
+body.home ul.phone-numbers {
+  list-style-type: none;
+  /*border: 1px solid;*/
+  text-align: center;
+  margin: 0 auto;
+}
+body.home ul.phone-numbers li {
+  margin-bottom: 20px;
+}
+body.home ul.phone-numbers li a {
+  color: #322822;
+}
+body.home ul.phone-numbers li a i.fa {
+  font-size: 20px;
+}
+body.home ul.phone-numbers li a span.phone-number {
+  font-size: 20px;
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
