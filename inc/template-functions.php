@@ -148,3 +148,23 @@ function get_menu_card() {
 
     return $html;
 }
+function list_phones(){
+    
+    $html = '';
+    
+    $html .='<ul class="phone-numbers">';
+        
+        $html .= '<li>';
+        $html .= '<a href="tel:0610410031"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0610410031</span></a>';
+        $html .= '</li>';
+        $html .= '<li>';
+        $html .= '<a href="tel:0653635200"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0653635200</span></a>';
+        $html .= '</li>';
+        $html .= '<li>';
+        $html .= '<a href="tel:0661517363"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0661517363</span></a>';
+        $html .= '</li>';        
+    $html .= '</ul>';
+    
+    return $html;
+    
+}
