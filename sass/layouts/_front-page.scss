@@ -38,6 +38,9 @@ body.home{
             @media screen and (min-width:992px){
                 max-width:100px;
             }
+            img{
+                border-radius: 17%;
+            }
         }
         nav.main-navigation{
             background: url('assets/images/main-menu.png') repeat;
@@ -247,6 +250,23 @@ body.home{
             transform: translateY(0);
         } 
     }
+    div.commande-wrapper{
+        background-color: #fff;
+        p{
+            font-size: 14px;
+            padding-top: 20px;
+            text-align: left;
+            @media screen and (min-width:992px){
+                font-size:20px;
+            }
+        }
+        h2{
+            font-size: 18px;
+            text-align: center;
+            /* border: 1px solid; */
+            padding: 19px 0px;
+        }
+    }
     div.adresse-wrapper{
         background-color: #fff;
         padding-top: 20px;
@@ -254,6 +274,28 @@ body.home{
         @media screen and ( min-width:992px){
             padding-top: 50px;
             padding-bottom: 50px;            
+        }
+        h1{
+            font-size: 26px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: #7b0000;    
+            @media screen and (min-width:992px){
+                font-size:40px;
+            }
+        }
+        h3{
+            font-size: 24px;
+            text-align: center;
+            color: #6b0000;
+            padding-bottom: 10px;            
+        }
+        h5{
+            text-align: center;
+            font-size: 18px;
+            padding-bottom: 10px;
+            text-decoration: underline  
         }
     }
     footer.site-footer{
@@ -264,5 +306,25 @@ body.home{
         border-top: 8px solid #801101;
         background: #9c1400;
         color: #fff;        
+    }
+    ul.phone-numbers{
+        list-style-type: none;
+        /*border: 1px solid;*/
+        text-align: center;
+        margin: 0 auto;
+        li{
+            margin-bottom: 20px;
+            a{
+                color: #322822;
+                
+                i.fa{
+                    font-size:20px;
+                }
+                span.phone-number{
+                    font-size: 20px;
+                    padding-left: 10px;
+                }
+            }
+        }
     }
 }
