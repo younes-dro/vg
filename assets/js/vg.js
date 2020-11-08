@@ -5,6 +5,11 @@
 (function ($) {
 
     $(document).ready(function () {
+            var logo = $('.custom-logo-link img').clone(true,true);
+            $('div.wp_mm_wrapper ul.menu').append(logo);
+            var phones = $('ul.phone-numbers').clone(true, true);
+            $('div.wp_mm_wrapper ul.menu').append(phones);
+
 // external js: isotope.pkgd.js
 
 
