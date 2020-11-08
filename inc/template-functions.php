@@ -138,9 +138,10 @@ function get_menu_card() {
         }
 
 
+        $html .= '<div class="grid-item grid-item--height2" style="height: 50px;width: 100%;background-color: #fff; color:#fff">spacer</div>';
         $html .= '</div>'; //.col-menu
     }
-
+    $html .= '<div class="grid-item grid-item--height2" style="height: 50px;width: 100%;background-color: #fff;color:#fff">spacer</div>';
     $html .= '</div>';
     $html .= '</div>';
 
