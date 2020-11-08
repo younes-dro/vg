@@ -32,13 +32,6 @@
                     ));
                     ?>
                 </nav><!-- #site-navigation -->
-                <section class="phone">
-                    <h1 class="phone-number">
-                        <i class="fa fa-phone-square"></i>
-                        <a href="tel:<?php //echo get_infos_options('tele_1') ?>"><?php //echo get_infos_options('tele_1') ?></a>
-                        <a href="tel:<?php //echo get_infos_options('tele_2') ?>"><?php // echo get_infos_options('tele_2') ?></a>
-                    </h1>
-                </section>
 
                 <?php the_custom_logo() ?>
 
