@@ -40,6 +40,7 @@ body.wp_mm_enable{
     overflow-x: hidden;
     position: fixed;
     right: -300px;
+    top:45px;
     bottom: 0;
     z-index: -9;
     width: 300px;
@@ -235,24 +236,54 @@ span.left{
     border-left: 2px solid  #7ac1b7;
 }
 body.home{
-    .wp_mm_wrapper ul.menu img.custom-logo{
-        max-width: 60px;
-        margin: 0 auto;
-        width: 60px;
-        text-align: center;
-
-        display: block;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    .wp_mm_wrapper ul.phone-numbers{
-        border: none;
-        li{
-            margin-bottom: 2px;
-            a i.fa, a span.phone-number{
-                font-size: 16px;
+    .wp_mm_wrapper{
+        ul.menu img.custom-logo{
+            max-width: 60px;
+            margin: 36px auto;
+            width: 60px;
+            text-align: center;
+            display: block;            
+        }
+        div.commande-wrapper{
+            background-color: transparent;
+            margin-top: 0px;
+            h5{
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                padding: 10px 5px;
+                font-size: 1rem;
             }
+            ul.phone-numbers{
+                border: none;
+                margin-top: 10px;
+                list-style-type: none;
+                @media screen and (min-width:992px){
+                    display: flex;
+                    justify-content:center;
+                }
+                li{
+                    margin-bottom: 19px;
+                    /* border: 1px solid #ccc; */
+                    padding: 10px;
+                    width: 88%;
+                    margin: 0 auto;
+                    height: 50px;
+                    @media screen and (min-width:992px){
+                        margin-bottom: 0;
+                        margin-right: 40px;
+                    }
+                    a{
+                        color: #030303;
 
+                        i.fa,  span.phone-number{
+                            font-size: 16px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

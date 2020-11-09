@@ -44,7 +44,7 @@ body.home{
         }
         nav.main-navigation{
             background: url('assets/images/main-menu.png') repeat;
-            width: 320px;
+            width: 232px;
             margin-right: 68px;
             height: 52px;
             a{
@@ -78,6 +78,7 @@ body.home{
         main.site-main{
             background-color: #fff;
             padding-top: 5px;
+            margin-top: 20px;
             @media screen and (min-width:992px){
                 width:980px;
                 margin:0 auto;
@@ -86,6 +87,11 @@ body.home{
         div.button-group{
             text-align: center;
             margin:5px 0;
+            button.button{
+                i{
+                    margin-right: 5px;
+                }
+            }
             button.button{
                 display: inline-block;
                 margin: 0 5px 10px;
@@ -237,7 +243,7 @@ body.home{
         z-index: 9999;
         margin: 0 auto!important;
         padding-top: 18px;
-        padding-bottom: 5px;
+        /*padding-bottom: 5px;*/
         animation:slide-down 0.7s;
     }
     @keyframes slide-down {
@@ -250,81 +256,91 @@ body.home{
             transform: translateY(0);
         } 
     }
-    div.commande-wrapper{
-        background-color: #fff;
-        p{
-            font-size: 14px;
-            padding-top: 20px;
-            text-align: left;
-            @media screen and (min-width:992px){
-                font-size:20px;
-            }
-        }
-        h2{
-            font-size: 18px;
-            text-align: center;
-            /* border: 1px solid; */
-            padding: 19px 0px;
-        }
-    }
-    div.adresse-wrapper{
-        background-color: #fff;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        @media screen and ( min-width:992px){
-            padding-top: 50px;
-            padding-bottom: 50px;            
-        }
-        h1{
-            font-size: 26px;
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 10px;
-            color: #7b0000;    
-            @media screen and (min-width:992px){
-                font-size:40px;
-            }
-        }
-        h3{
-            font-size: 24px;
-            text-align: center;
-            color: #6b0000;
-            padding-bottom: 10px;            
-        }
-        h5{
-            text-align: center;
-            font-size: 18px;
-            padding-bottom: 10px;
-            text-decoration: underline  
-        }
-    }
+
+
     footer.site-footer{
         padding: 2rem;
         width: 100%;
         clear: both;
         /* margin-top: 7px; */
-        border-top: 8px solid #801101;
+        /*border-bottom: 8px solid #801101;*/
         background: #9c1400;
         color: #fff;        
-    }
-    ul.phone-numbers{
-        list-style-type: none;
-        /*border: 1px solid;*/
-        text-align: center;
-        margin: 0 auto;
-        li{
-            margin-bottom: 20px;
-            a{
-                color: #322822;
-                
-                i.fa{
-                    font-size:20px;
-                }
-                span.phone-number{
-                    font-size: 20px;
-                    padding-left: 10px;
+        div.commande-wrapper{
+            width: 100%;
+            margin: 0 auto;
+            background-color: #801101;
+            padding-top: 20px; 
+            padding-bottom: 20px;
+            padding: 20px;
+            @media screen and (min-width:992px){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h5{
+                text-align: center;
+                @media screen and (min-width:992px){
+                    display:none;
                 }
             }
+        }
+        ul.phone-numbers{
+            list-style-type: none;
+            /*border: 1px solid;*/
+            text-align: center;
+            margin: 0 auto;
+            @media screen and (min-width:992px){
+                height: 40px;
+                line-height: 40px;
+            }
+            li{
+                margin-bottom: 20px;
+                @media screen and (min-width:992px){
+                    margin-right: 20px;
+                    float: left;
+                }
+                a{
+                    color: #fff;
+
+                    i.fa{
+                        font-size:20px;
+                    }
+                    span.phone-number{
+                        font-size: 20px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    a.scrollup{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 50px;
+        right: 10px;
+        /*background-color: rgb(54 51 51 / 90%);*/
+        /* opacity: .5; */
+        display: none;
+        border-radius: 50%;
+        text-align: center;
+        /* padding: 13px 0 0 0; */
+        /* color: #fff; */
+        z-index: 99;
+        line-height: 50px;
+        font-size: 40px;
+
+        &:hover{
+            /*background-color: hsla(0, 0%, 82%, 1);*/
+        }
+
+        &:visited{ 
+            color: #fff;
+        }
+
+        > i {
+            color: #000;
         }
     }
 }
