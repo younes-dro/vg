@@ -9,7 +9,7 @@
  * @package dro_caterer
  */
 ?>
-<div class="container-fluid commande-wrapper" id="commander">
+<!--<div class="container-fluid commande-wrapper" id="commander">
     <div class="row">
         <div class="col-12 col-md-1"></div>
         <div class="col-12 col-md-4">
@@ -21,8 +21,8 @@
         </div>
         <div class="col-12 col-md-1"></div>
     </div>
-</div>
-<div class="container-fluid adresse-wrapper" id="adresse">
+</div>-->
+<!--<div class="container-fluid adresse-wrapper" id="adresse">
     <div class="row">
         <div class="col-12 col-md-1"></div>
         <div class="col-12 col-md-6">
@@ -36,24 +36,15 @@
         </div>
         <div class="col-12 col-md-1"></div>
     </div>
-</div>
+</div>-->
 </div><!-- #content -->
 
 <footer id="contact" class="site-footer">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-4">
-                <div class="row">
-                    <div class="col-12">
-                        
-                    </div>
-                    <div class="col-12">
-                        
-                    </div>
-                </div>
-            </div><!-- ./col-12 col-md-4 -->
-            <div class="col-12 col-md-8">
-                
+            
+            <div class="col-12">
+                <?php echo list_phones();?>
             </div>
 
         </div><!-- ./row justify-content-center -->
@@ -62,7 +53,7 @@
 </footer><!-- #colophon -->
 
 </div><!-- #page -->
-<a href="#" class="scrollup"><i class="fa fa-arrow-up"></i></a>
+<a href="#" class="scrollup"><i class="fa fa-chevron-circle-up"></i></a>
 <?php wp_footer(); ?>
 
 
