@@ -53,7 +53,7 @@ function get_menu_card_nav() {
 
     $html .= '<h1 class="page-title">Nos Menus</h1>';
     $html .= '<div class="button-group filters-button-group">';
-    $html .= ' <button class="button is-checked " data-filter="*"><i class="fas fa-list"></i>' . __('Tout', 'vg') . '</button>';
+    $html .= ' <button class="button is-checked " data-filter="*"><i class="fa fa-list"></i>' . __('Tout', 'vg') . '</button>';
     foreach ($parent_cats as $parent_cat) {
         $html .= ' <button class="button" data-filter=".' . $parent_cat->slug . '">' . $parent_cat->name . '</button>';
     }
@@ -151,20 +151,22 @@ function get_menu_card() {
 function list_phones(){
     
     $html = '';
-    
+    $html .= '<div class="commande-wrapper">';
+    $html .= '<h5>Pour passer commande ou toutes informations</h5>';
     $html .='<ul class="phone-numbers">';
         
         $html .= '<li>';
-        $html .= '<a href="tel:0610410031"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0610410031</span></a>';
+        $html .= '<a class="vg-phone" href="tel:+212610410031"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0610410031</span></a>';
         $html .= '</li>';
         $html .= '<li>';
-        $html .= '<a href="tel:0653635200"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0653635200</span></a>';
+        $html .= '<a class="vg-phone" href="tel:+212653635200"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0653635200</span></a>';
         $html .= '</li>';
         $html .= '<li>';
-        $html .= '<a href="tel:0661517363"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0661517363</span></a>';
+        $html .= '<a class="vg-phone" href="tel:+212661517363"><span><i class="fa fa-phone-square"></i></span><span class="phone-number">0661517363</span></a>';
         $html .= '</li>';        
     $html .= '</ul>';
     
+    $html .='</div>';
     return $html;
     
 }
