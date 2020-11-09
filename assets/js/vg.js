@@ -5,10 +5,10 @@
 (function ($) {
 
     $(document).ready(function () {
-            var logo = $('.custom-logo-link img').clone(true,true);
-            $('div.wp_mm_wrapper ul.menu').append(logo);
-            var phones = $('ul.phone-numbers').clone(true, true);
-            $('div.wp_mm_wrapper ul.menu').append(phones);
+        var logo = $('.custom-logo-link img').clone(true, true);
+        $('div.wp_mm_wrapper ul.menu').append(logo);
+        var phones = $('div.commande-wrapper').clone();
+        $(phones).insertAfter('div.wp_mm_wrapper ul.menu');
 
 // external js: isotope.pkgd.js
 
@@ -67,6 +67,12 @@
             } else {
                 $('.button-group').removeClass('sticky-menu-nav');
             }
+            // Scroll to the top
+            if ($(this).scrollTop() > 200) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
 
         });
         $('div.button-group button').on('click', function () {
@@ -81,6 +87,13 @@
                 );
             }
         });
+
+        // Scroll to the top
+        $('.scrollup').click(function () {
+            $("html, body").animate({scrollTop: 0}, 200);
+            return false;
+        });
+
         /* Main Menu Scroll */
         $('ul.menu a').on('click', function (e) {
             e.preventDefault();
