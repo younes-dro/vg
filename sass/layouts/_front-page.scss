@@ -31,7 +31,7 @@ body.home{
             display: inline-block;
             position: absolute;
             top: 4px;
-            max-width: 50px;
+            max-width: 45px;
             height: auto;
             transition: all 1s;
             left: 4px; 
@@ -109,6 +109,36 @@ body.home{
                     background-color: #e0caa6;
                 }
             }
+            div.collapse-container{
+                text-align: center;
+                padding-right: 20px;
+                background-color: #000000f2;
+                width: 45px;
+                height: 40px;
+                position: absolute;
+                right: 15px;
+                font-size: 30px;
+                padding: 0;
+                display: none;
+                line-height: 40px;
+                box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
+                border-bottom-left-radius: 50%;
+                bottom: -40px;
+                @media screen and(min-width:992px){
+                    display: none!important; 
+                }
+                span{
+                    color:#fff;
+                }
+
+            }
+            div.collapse-container.show{
+                display: block;
+            }
+        }
+        div.button-group.closed{
+            transform: translateY(0);
+            transition: all 0.5s;
         }
         div.menu-card-wrapper{
             position: relative;
@@ -245,9 +275,10 @@ body.home{
         box-shadow: 0 0 10px rgba(0,0,0,0.4);
         z-index: 9999;
         margin: 0 auto!important;
-        padding-top: 18px;
-        /*padding-bottom: 5px;*/
-        animation:slide-down 0.7s;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /*animation:slide-down 0.7s;*/
+        transform: translateY(-96%);
     }
     @keyframes slide-down {
         0% {
@@ -323,7 +354,7 @@ body.home{
         height: 50px;
         bottom: 50px;
         right: 10px;
-        /*background-color: rgb(54 51 51 / 90%);*/
+        background-color: #000;
         /* opacity: .5; */
         display: none;
         border-radius: 50%;
@@ -343,7 +374,7 @@ body.home{
         }
 
         > i {
-            color: #000;
+            color: #fff;
         }
     }
 }

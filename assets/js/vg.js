@@ -59,13 +59,23 @@
         /* Stick navigation and scroll top on window scrolling  */
 
         var stickyNavTop = $('.button-group').offset().top;
+        var collapse = $("<div/>",
+                {
+                    'class': 'collapse-container',
+                    'html': '<span class="ionicon ion-android-more-vertical"></span>'}
+        );
+        $('.button-group').append(collapse);
         $(window).scroll(function () {
             var scrollToTop = $(window).scrollTop();
 
             if (scrollToTop > stickyNavTop) {
                 $('.button-group').addClass('sticky-menu-nav');
+                $('div.collapse-container').addClass('show');
+//                $('div.collapse-container span').removeClass('ion-more');
             } else {
-                $('.button-group').removeClass('sticky-menu-nav');
+                $('.button-group').removeClass('sticky-menu-nav closed');
+                $('div.collapse-container').removeClass('show');
+//                $('div.collapse-container span').removeClass('ion-more');
             }
             // Scroll to the top
             if ($(this).scrollTop() > 200) {
@@ -87,6 +97,11 @@
                 );
             }
         });
+        $('div.collapse-container span.ionicon').on('click',function(){
+            $('.button-group').toggleClass('closed');
+            
+            
+        });
 
         // Scroll to the top
         $('.scrollup').click(function () {
@@ -94,15 +109,15 @@
             return false;
         });
 
-        
+
         /* Modal */
         $("body").on("click", "ul.menu a", function (e) {
-            $( "#toggle-menu" ).trigger( "click" );
+            $("#toggle-menu").trigger("click");
             e.preventDefault();
-            
+
             $linkTo = $(this).attr('href');
             console.log($linkTo);
-            $($linkTo+'Form').modal("show");
+            $($linkTo + 'Form').modal("show");
         });
     });
 

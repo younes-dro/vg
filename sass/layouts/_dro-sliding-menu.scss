@@ -49,7 +49,9 @@ body.wp_mm_enable{
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: right 0.5s;
-    /*box-sh*/
+   @media only screen and (orientation: landscape) {
+   overflow-y: scroll;
+   }
 }
 .wp_mm_wrapper.active{
     z-index: 999;
@@ -242,7 +244,8 @@ body.home{
             margin: 36px auto;
             width: 60px;
             text-align: center;
-            display: block;            
+            display: block;
+            border-radius: 17%;
         }
         div.commande-wrapper{
             background-color: transparent;

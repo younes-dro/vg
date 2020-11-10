@@ -72,7 +72,7 @@
 </div>
 
 </div><!-- #page -->
-<a href="#" class="scrollup"><i class="fa fa-chevron-circle-up"></i></a>
+<a href="#" class="scrollup"><i class="ionicon ion-ios-arrow-up"></i></a>
 <?php wp_footer(); ?>
 
 
