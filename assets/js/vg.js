@@ -94,16 +94,15 @@
             return false;
         });
 
-        /* Main Menu Scroll */
-        $('ul.menu a').on('click', function (e) {
+        
+        /* Modal */
+        $("body").on("click", "ul.menu a", function (e) {
+            $( "#toggle-menu" ).trigger( "click" );
             e.preventDefault();
+            
             $linkTo = $(this).attr('href');
-            $("body,html").animate(
-                    {
-                        scrollTop: $($linkTo).offset().top - 150
-                    },
-            500
-                    );
+            console.log($linkTo);
+            $($linkTo+'Form').modal("show");
         });
     });
 

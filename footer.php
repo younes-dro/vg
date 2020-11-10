@@ -52,6 +52,25 @@
     </div><!-- ./container-fluid -->
 </footer><!-- #colophon -->
 
+<!-- Modal -->
+<div class="modal fade" style="z-index: 123999942222" id="contactForm" tabindex="-1" role="dialog" aria-labelledby="contactForm" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactForm">Laisser nous un message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php echo do_shortcode('[contact-form-7 id="127" title="Formulaire de contact 1"]');?>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
 </div><!-- #page -->
 <a href="#" class="scrollup"><i class="fa fa-chevron-circle-up"></i></a>
 <?php wp_footer(); ?>

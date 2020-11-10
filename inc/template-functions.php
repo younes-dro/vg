@@ -65,7 +65,7 @@ function get_menu_card_nav() {
 function get_menu_card() {
 
     $html = '';
-    $html .= '<div class="menu-card-wrapper">';
+    $html .= '<div id="menus" class="menu-card-wrapper">';
     $html .= '<div class="menu-card grid-menu">';
     $parent_cats = get_parent_categories();
     foreach ($parent_cats as $parent_cat) {
