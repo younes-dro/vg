@@ -61,8 +61,9 @@
         var stickyNavTop = $('.button-group').offset().top;
         var collapse = $("<div/>",
                 {
+                    'id':'collapse-container',
                     'class': 'collapse-container',
-                    'html': '<span class="ionicon ion-android-more-vertical"></span>'}
+                    'html': '<span  class="ionicon ion-android-more-vertical"></span>'}
         );
         $('.button-group').append(collapse);
         $(window).scroll(function () {
@@ -97,12 +98,12 @@
                 );
             }
         });
-        $('div.collapse-container span.ionicon').on('click',function(){
+        $('div.collapse-container').on('click',function(){
             $('.button-group').toggleClass('closed');
             
             
         });
-
+ 
         // Scroll to the top
         $('.scrollup').click(function () {
             $("html, body").animate({scrollTop: 0}, 200);
