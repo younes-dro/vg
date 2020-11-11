@@ -671,6 +671,11 @@ body.home .sticky-menu-nav {
   /*animation:slide-down 0.7s;*/
   transform: translateY(-96%);
 }
+@media screen and (min-width: 992px) {
+  body.home .sticky-menu-nav {
+    transform: translateY(0);
+  }
+}
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -748,8 +753,8 @@ body.home a.scrollup {
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 50px;
-  right: 10px;
+  bottom: 16px;
+  right: 15px;
   background-color: #000;
   /* opacity: .5; */
   display: none;
@@ -760,6 +765,12 @@ body.home a.scrollup {
   z-index: 99;
   line-height: 50px;
   font-size: 40px;
+}
+@media screen and (min-height: 992px) {
+  body.home a.scrollup {
+    bottom: 50px;
+    right: 10px;
+  }
 }
 body.home a.scrollup:hover {
   /*background-color: hsla(0, 0%, 82%, 1);*/
