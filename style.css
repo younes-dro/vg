@@ -560,13 +560,13 @@ body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .chi
   position: relative;
   background: none;
   padding-left: 0;
-  font-size: 14px;
+  font-size: 18px;
   color: #321a0a;
   font-family: Georgia, sans-serif;
 }
 @media screen and (min-width: 992px) {
   body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-title {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-title:before {
@@ -585,6 +585,14 @@ body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .chi
   z-index: 1;
   padding-right: 15px;
   background: #fff;
+}
+body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-deep-title {
+  font-size: 15px;
+  /* border: 1px solid #f00; */
+  margin: 28px auto 10px;
+  padding-left: 23px;
+  color: #321a0a;
+  font-weight: 400;
 }
 body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-details-wrapper {
   /*background-color: #f00;*/

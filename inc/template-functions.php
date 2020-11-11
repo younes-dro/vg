@@ -40,6 +40,35 @@ function get_aliments($term_id) {
     return get_posts($args);
 }
 
+function loop_aliments( $aliments){
+        $html  = '';
+                foreach ($aliments as $aliment) {
+
+                    $featured_img_url = get_the_post_thumbnail_url($aliment->ID, 'post-thumbnail');
+                    $price = get_field('prix', $aliment->ID);
+                    $ingredient = get_field('ingredient', $aliment->ID);
+                    $html .= '<div class="desc col-12">';
+                    $html .= '<div class="row">';
+                    
+                    $html .= '<div class="col-4">';
+                    $html .= '<img src ="' .$featured_img_url. '" />';
+                    $html .= '</div>';
+                    
+                    $html .= '<div class="col-8">';
+                    $html .= '<div class="txt">';
+                    $html .= '<span class="aliment-title">' . $aliment->post_title . '</span>';
+                    $html .= '<p>'.$ingredient.'</p>';
+                    $html .= '<span class="aliment-price"><span class="amount">'.$price.' DH</span></span>';
+                    $html .= '</div>';
+                    $html .= '</div>';
+                    
+                    $html .= '</div>';
+                    $html .= '</div>';
+
+                }    
+                
+                return $html;
+}
 function has_child($term_id) {
     $has_child = get_term_children($term_id, 'category_aliment');
 
@@ -76,63 +105,37 @@ function get_menu_card() {
             $child_cats = get_child_categories($parent_cat->term_id);
             foreach ($child_cats as $child_cat) {
                 $html .= '<h4 class="child-cat-title"><span>' . $child_cat->name . '</span></h4>';
-                $aliments = get_aliments($child_cat->term_id);
-                $html .= '<div class="aliment-details-wrapper container-fluid">';
-                $html .= '<div class="aliment-details row">';
-                foreach ($aliments as $aliment) {
 
-                    $featured_img_url = get_the_post_thumbnail_url($aliment->ID, 'post-thumbnail');
-                    $price = get_field('prix', $aliment->ID);
-                    $ingredient = get_field('ingredient', $aliment->ID);
-                    $html .= '<div class="desc col-12">';
-                    $html .= '<div class="row">';
+                
+                if( has_child( $child_cat->term_id ) ){
                     
-                    $html .= '<div class="col-4">';
-                    $html .= '<img src ="' .$featured_img_url. '" />';
-                    $html .= '</div>';
+                    $child_cats_deep = get_child_categories($child_cat->term_id);
+                    foreach ($child_cats_deep as $child_cat_deep ) {
+                        $html .= '<h6 class="child-cat-deep-title">'.$child_cat_deep->name.'</h6>';
+                        $aliments = get_aliments($child_cat_deep->term_id);
+                        $html .= '<div class="aliment-details-wrapper container-fluid">';
+                        $html .= '<div class="aliment-details row">';
+                        $html .= loop_aliments($aliments);
+                        $html .= '</div>';
+                        $html .= '</div>';                        
+                    }
                     
-                    $html .= '<div class="col-8">';
-                    $html .= '<div class="txt">';
-                    $html .= '<span class="aliment-title">' . $aliment->post_title . '</span>';
-                    $html .= '<p>'.$ingredient.'</p>';
-                    $html .= '<span class="aliment-price"><span class="amount">'.$price.' DH</span></span>';
+                }else{
+                    $aliments = get_aliments($child_cat->term_id);
+                    $html .= '<div class="aliment-details-wrapper container-fluid">';
+                    $html .= '<div class="aliment-details row">';
+                    $html .= loop_aliments($aliments);
                     $html .= '</div>';
-                    $html .= '</div>';
-                    
-                    $html .= '</div>';
-                    $html .= '</div>';
-
+                    $html .= '</div>';  
                 }
-                $html .= '</div>';
-                $html .= '</div>';
+
             }
         } else {
 
             $aliments = get_aliments($parent_cat->term_id);
             $html .= '<div class="aliment-details-wrapper container-fluid">';
             $html .= '<div class="aliment-details row">';
-            foreach ($aliments as $aliment) {
-                    $featured_img_url = get_the_post_thumbnail_url($aliment->ID, 'post-thumbnail');
-                    $price = get_field('prix', $aliment->ID);
-                    $ingredient = get_field('ingredient', $aliment->ID);
-                    $html .= '<div class="desc col-12">';
-                    $html .= '<div class="row">';
-                    
-                    $html .= '<div class="col-4">';
-                    $html .= '<img src ="' .$featured_img_url. '" />';
-                    $html .= '</div>';
-                    
-                    $html .= '<div class="col-8">';
-                    $html .= '<div class="txt">';
-                    $html .= '<span class="aliment-title">' . $aliment->post_title . '</span>';
-                    $html .= '<p>'.$ingredient.'</p>';
-                    $html .= '<span class="aliment-price"><span class="amount">'.$price.' DH</span></span>';
-                    $html .= '</div>';
-                    $html .= '</div>';
-                    
-                    $html .= '</div>';
-                    $html .= '</div>';
-            }
+            $html .= loop_aliments($aliments);
             $html .= '</div>';
             $html .= '</div>';
         }

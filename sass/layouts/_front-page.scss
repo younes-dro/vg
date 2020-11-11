@@ -34,7 +34,7 @@ body.home{
             max-width: 45px;
             height: auto;
             transition: all 1s;
-            left: 4px; 
+            left: 4px;
             @media screen and (min-width:992px){
                 max-width:100px;
             }
@@ -73,7 +73,7 @@ body.home{
             color: #321a0a;
             font-weight: normal;
             font-size: 30px;
-            font-family: Georgia, sans-serif;            
+            font-family: Georgia, sans-serif;
         }
         main.site-main{
             background-color: #fff;
@@ -125,7 +125,7 @@ body.home{
                 border-bottom-left-radius: 50%;
                 bottom: -40px;
                 @media screen and(min-width:992px){
-                    display: none!important; 
+                    display: none!important;
                 }
                 span{
                     color:#fff;
@@ -158,17 +158,17 @@ body.home{
                         background: #f3e9d8;
                         font-size: 18px;
                         color: #321a0a;
-                        font-family: Georgia, sans-serif; 
+                        font-family: Georgia, sans-serif;
                     }
                     .child-cat-title{
                         position: relative;
                         background: none;
                         padding-left: 0;
-                        font-size: 14px;
+                        font-size: 18px;
                         color: #321a0a;
                         font-family: Georgia, sans-serif;
                         @media screen and (min-width:992px){
-                            font-size:16px;
+                            font-size:20px;
                         }
                         &:before{
                             content: '';
@@ -186,8 +186,16 @@ body.home{
                             position: relative;
                             z-index: 1;
                             padding-right: 15px;
-                            background: #fff;                            
+                            background: #fff;
                         }
+                    }
+                    .child-cat-deep-title{
+                        font-size: 15px;
+                        /* border: 1px solid #f00; */
+                        margin: 28px auto 10px;
+                        padding-left: 23px;
+                        color: #321a0a;
+                        font-weight: 400;
                     }
 
                 }
@@ -287,11 +295,11 @@ body.home{
         0% {
             opacity: 0;
             transform: translateY(-100%);
-        } 
+        }
         100% {
             opacity: 0.9;
             transform: translateY(0);
-        } 
+        }
     }
 
 
@@ -302,12 +310,12 @@ body.home{
         /* margin-top: 7px; */
         /*border-bottom: 8px solid #801101;*/
         background: #9c1400;
-        color: #fff;        
+        color: #fff;
         div.commande-wrapper{
             width: 100%;
             margin: 0 auto;
             background-color: #801101;
-            padding-top: 20px; 
+            padding-top: 20px;
             padding-bottom: 20px;
             padding: 20px;
             @media screen and (min-width:992px){
@@ -376,7 +384,7 @@ body.home{
             /*background-color: hsla(0, 0%, 82%, 1);*/
         }
 
-        &:visited{ 
+        &:visited{
             color: #fff;
         }
 
