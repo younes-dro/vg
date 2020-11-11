@@ -19,6 +19,20 @@
                 itemSelector: '.col-menu',
                 layoutMode: 'vertical'
             });
+            function onArrange() {
+                $("body,html").animate(
+                        {
+                            scrollTop: $("div.menu-card-wrapper").offset().top
+                        },
+                500, function () {
+//                    $('div.menu-card-wrapper').toggleClass('scolled');
+                    $('div.menu-card-wrapper').addClass('onarrange');
+//                    console.log('scroeldd');
+                }
+                );
+            }
+// bind event listener
+            iso.on('arrangeComplete', onArrange);
             // filter functions
             var filterFns = {
             };
@@ -61,7 +75,7 @@
         var stickyNavTop = $('.button-group').offset().top;
         var collapse = $("<div/>",
                 {
-                    'id':'collapse-container',
+                    'id': 'collapse-container',
                     'class': 'collapse-container',
                     'html': '<span  class="ionicon ion-android-more-vertical"></span>'}
         );
@@ -71,10 +85,13 @@
 
             if (scrollToTop > stickyNavTop) {
                 $('.button-group').addClass('sticky-menu-nav');
+                $('div.menu-card-wrapper').addClass('scolled');
                 $('div.collapse-container').addClass('show');
 //                $('div.collapse-container span').removeClass('ion-more');
             } else {
                 $('.button-group').removeClass('sticky-menu-nav closed');
+                $('div.menu-card-wrapper').removeClass('scolled');
+                $('div.menu-card-wrapper').removeClass('onarrange');
                 $('div.collapse-container').removeClass('show');
 //                $('div.collapse-container span').removeClass('ion-more');
             }
@@ -98,12 +115,12 @@
                 );
             }
         });
-        $('div.collapse-container').on('click',function(){
+        $('div.collapse-container').on('click', function () {
             $('.button-group').toggleClass('closed');
-            
-            
+
+
         });
- 
+
         // Scroll to the top
         $('.scrollup').click(function () {
             $("html, body").animate({scrollTop: 0}, 200);

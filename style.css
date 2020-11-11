@@ -481,6 +481,8 @@ body.home div.site-content main.site-main {
 body.home div.site-content div.button-group {
   text-align: center;
   margin: 5px 0;
+  background-color: #fff;
+  transition: all 0.7s;
 }
 body.home div.site-content div.button-group button.button i {
   margin-right: 5px;
@@ -494,9 +496,9 @@ body.home div.site-content div.button-group button.button {
   padding: 0 10px;
   border: 2px solid #e0caa6;
   background-color: #fff;
-  min-width: 140px;
-  min-height: 34px;
-  font-size: 12px;
+  min-width: 150px;
+  min-height: 50px;
+  font-size: 1em;
   cursor: pointer;
 }
 body.home div.site-content div.button-group button.button:hover {
@@ -532,6 +534,12 @@ body.home div.site-content div.button-group div.collapse-container.show {
 body.home div.site-content div.button-group.closed {
   transform: translateY(0);
   transition: all 0.5s;
+}
+body.home div.site-content div.menu-card-wrapper.scolled {
+  padding-top: 194px;
+}
+body.home div.site-content div.menu-card-wrapper.onarrange {
+  padding-top: 480px;
 }
 body.home div.site-content div.menu-card-wrapper {
   position: relative;

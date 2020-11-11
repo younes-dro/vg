@@ -79,9 +79,8 @@ function get_menu_card_nav() {
 
     $html = '';
     $parent_cats = get_parent_categories();
-
-    $html .= '<h1 class="page-title">Nos Menus</h1>';
     $html .= '<div class="button-group filters-button-group">';
+    $html .= '<h1 class="page-title">Nos Menus</h1>';    
     $html .= ' <button class="button is-checked " data-filter="*"><i class="fa fa-list"></i>' . __('Tout', 'vg') . '</button>';
     foreach ($parent_cats as $parent_cat) {
         $html .= ' <button class="button" data-filter=".' . $parent_cat->slug . '">' . $parent_cat->name . '</button>';

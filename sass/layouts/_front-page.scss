@@ -87,6 +87,8 @@ body.home{
         div.button-group{
             text-align: center;
             margin:5px 0;
+            background-color: #fff;
+            transition: all 0.7s;
             button.button{
                 i{
                     margin-right: 5px;
@@ -101,9 +103,9 @@ body.home{
                 padding: 0 10px;
                 border: 2px solid #e0caa6;
                 background-color: #fff;
-                min-width: 140px;
-                min-height: 34px;
-                font-size: 12px;
+                min-width: 150px;
+                min-height: 50px;
+                font-size: 1em;
                 cursor: pointer;
                 &:hover{
                     background-color: #e0caa6;
@@ -139,6 +141,13 @@ body.home{
         div.button-group.closed{
             transform: translateY(0);
             transition: all 0.5s;
+        }
+        div.menu-card-wrapper.scolled{
+            padding-top: 194px;
+
+        }
+        div.menu-card-wrapper.onarrange{
+            padding-top: 480px;
         }
         div.menu-card-wrapper{
             position: relative;
