@@ -6,8 +6,7 @@ function get_parent_categories() {
             array(
                 'taxonomy' => 'category_aliment',
                 'parent' => 0,
-                'orderby' => 'slug',
-                'order' => 'ASC'));
+                'orderby' => 'term_order' ));
 }
 
 function get_child_categories($parent) {
@@ -16,8 +15,7 @@ function get_child_categories($parent) {
             array(
                 'taxonomy' => 'category_aliment',
                 'parent' => $parent,
-                'orderby' => 'slug',
-                'order' => 'ASC'));
+                'orderby' => 'term_order' ));
 }
 
 function get_aliments($term_id) {
