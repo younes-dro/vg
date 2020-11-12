@@ -25,19 +25,17 @@
                             scrollTop: $("div.menu-card-wrapper").offset().top
                         },
                 500, function () {
-//                    $('div.menu-card-wrapper').toggleClass('scolled');
                     $('div.menu-card-wrapper').addClass('onarrange');
-//                    console.log('scroeldd');
                 }
                 );
             }
-// bind event listener
+            // bind event listener
             iso.on('arrangeComplete', onArrange);
             // filter functions
             var filterFns = {
             };
 
-// bind filter button click
+            // bind filter button click
             var filtersElem = document.querySelector('.filters-button-group');
             filtersElem.addEventListener('click', function (event) {
                 // only work with buttons
@@ -50,7 +48,7 @@
                 iso.arrange({filter: filterValue});
             });
 
-// change is-checked class on buttons
+            // change is-checked class on buttons
             var buttonGroups = document.querySelectorAll('.button-group');
             for (var i = 0, len = buttonGroups.length; i < len; i++) {
                 var buttonGroup = buttonGroups[i];
@@ -66,7 +64,7 @@
                     buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
                     event.target.classList.add('is-checked');
                 });
-            }
+            }           
         });
 
 
@@ -77,7 +75,7 @@
                 {
                     'id': 'collapse-container',
                     'class': 'collapse-container',
-                    'html': '<span  class="ionicon ion-android-more-vertical"></span>'}
+                    'html': '<span></span>'}
         );
         $('.button-group').append(collapse);
         $(window).scroll(function () {
@@ -87,13 +85,11 @@
                 $('.button-group').addClass('sticky-menu-nav');
                 $('div.menu-card-wrapper').addClass('scolled');
                 $('div.collapse-container').addClass('show');
-//                $('div.collapse-container span').removeClass('ion-more');
             } else {
                 $('.button-group').removeClass('sticky-menu-nav closed');
                 $('div.menu-card-wrapper').removeClass('scolled');
                 $('div.menu-card-wrapper').removeClass('onarrange');
                 $('div.collapse-container').removeClass('show');
-//                $('div.collapse-container span').removeClass('ion-more');
             }
             // Scroll to the top
             if ($(this).scrollTop() > 200) {
@@ -117,6 +113,7 @@
         });
         $('div.collapse-container').on('click', function () {
             $('.button-group').toggleClass('closed');
+            $('div.collapse-container > span ').toggleClass('open');
 
 
         });
