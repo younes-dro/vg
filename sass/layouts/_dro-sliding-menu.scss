@@ -40,7 +40,7 @@ body.wp_mm_enable{
     overflow-x: hidden;
     position: fixed;
     right: -300px;
-    top:45px;
+    top:56px;
     bottom: 0;
     z-index: -9;
     width: 300px;
@@ -49,9 +49,9 @@ body.wp_mm_enable{
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: right 0.5s;
-   @media only screen and (orientation: landscape) {
-   overflow-y: scroll;
-   }
+    @media only screen and (orientation: landscape) {
+        overflow-y: scroll;
+    }
 }
 .wp_mm_wrapper.active{
     z-index: 999;
@@ -132,10 +132,9 @@ span.left{
     right: 0;
     top: 0;
     width: 100%;
-    height: 45px;
-
+    height: 56px;
     background: #9f1400;
-    transition: width 1s;
+    transition: width 1s;    
 }
 #toggle-menu{
     cursor: pointer;
@@ -144,7 +143,7 @@ span.left{
     width: 60px;
     position: absolute;
     right: 0px;
-    top: 0px;
+    top: 6px;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -153,10 +152,10 @@ span.left{
     -o-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
     z-index: 9999;
-    background:url(assets/images/main-menu.png);
+    /*background:url(assets/images/main-menu.png);*/
 }
 #toggle-menu span{
-    background-color: #44120b;
+    background-color: #fff;
     border-radius: 5px;
     display: block;
     height: 2px;
@@ -242,10 +241,12 @@ body.home{
         ul.menu img.custom-logo{
             max-width: 60px;
             margin: 36px auto;
-            width: 60px;
+            /* width: 67px; */
             text-align: center;
             display: block;
             border-radius: 17%;
+            background-color: black;
+            padding: 5px;
         }
         div.commande-wrapper{
             background-color: transparent;

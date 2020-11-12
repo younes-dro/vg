@@ -74,7 +74,7 @@ body.wp_mm_enable {
   overflow-x: hidden;
   position: fixed;
   right: -300px;
-  top: 45px;
+  top: 56px;
   bottom: 0;
   z-index: -9;
   width: 300px;
@@ -181,7 +181,7 @@ span.left {
   right: 0;
   top: 0;
   width: 100%;
-  height: 45px;
+  height: 56px;
   background: #9f1400;
   transition: width 1s;
 }
@@ -193,7 +193,7 @@ span.left {
   width: 60px;
   position: absolute;
   right: 0px;
-  top: 0px;
+  top: 6px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -202,11 +202,11 @@ span.left {
   -o-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
   z-index: 9999;
-  background: url(assets/images/main-menu.png);
+  /*background:url(assets/images/main-menu.png);*/
 }
 
 #toggle-menu span {
-  background-color: #44120b;
+  background-color: #fff;
   border-radius: 5px;
   display: block;
   height: 2px;
@@ -296,10 +296,12 @@ span.left {
 body.home .wp_mm_wrapper ul.menu img.custom-logo {
   max-width: 60px;
   margin: 36px auto;
-  width: 60px;
+  /* width: 67px; */
   text-align: center;
   display: block;
   border-radius: 17%;
+  background-color: black;
+  padding: 5px;
 }
 body.home .wp_mm_wrapper div.commande-wrapper {
   background-color: transparent;
@@ -421,7 +423,7 @@ body.home header.site-header .custom-logo-link {
   display: inline-block;
   position: absolute;
   top: 4px;
-  max-width: 45px;
+  max-width: 60px;
   height: auto;
   transition: all 1s;
   left: 4px;
@@ -522,7 +524,7 @@ body.home div.site-content div.button-group div.collapse-container {
 }
 @media screen and (min-width: 992px) {
   body.home div.site-content div.button-group div.collapse-container {
-    display: none !important;
+    /*display: none!important;*/
   }
 }
 body.home div.site-content div.button-group div.collapse-container span {
@@ -796,6 +798,62 @@ body.home a.scrollup:visited {
 }
 body.home a.scrollup > i {
   color: #fff;
+}
+body.home form.search-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: transparent;
+  /* height: 45px; */
+  width: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+body.home form.search-form a.btn {
+  height: 44px;
+  width: 50px;
+  font-size: 25px;
+  border: 1px solid #fff;
+  border-radius: 0px;
+  background-color: #000;
+  color: #FFF;
+  display: none;
+}
+body.home form.search-form a.btn span.ion-android-search {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: transparent;
+  /* height: 45px; */
+  width: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+body.home form.search-form #myInput {
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 0px;
+  /* margin: 0 auto; */
+  /* position: absolute; */
+  /* right: 0; */
+  /* left: 0; */
+  /* margin-top: 5px; */
+  height: 38px;
+  /* border-radius: 20px; */
+  /* float: left; */
+  width: 158px;
+  height: 44px;
+  border: none;
+  /* border-right-style: none; */
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
