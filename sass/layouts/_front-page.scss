@@ -68,11 +68,11 @@ body.home{
         /*background: #fff;*/
         h1.page-title{
             float: none;
-            margin: 30px 0;
+            margin: 0px 0 17px;
             text-align: center;
             color: #321a0a;
             font-weight: normal;
-            font-size: 30px;
+            font-size: 25px;
             font-family: Georgia, sans-serif;
         }
         main.site-main{
@@ -100,8 +100,8 @@ body.home{
             button.button{
                 display: inline-block;
                 margin: 0 5px 10px;
-                padding: 0 10px;
-                border: 2px solid #e0caa6;
+                padding: 0;
+                border: 1px solid #e0caa6;
                 background-color: #fff;
                 min-width: 150px;
                 min-height: 50px;
@@ -134,7 +134,7 @@ body.home{
                     &:after{
                         width: 14px;
                     }
-                    
+
                 }
                 > span{
                     top: 50%;
@@ -145,7 +145,7 @@ body.home{
                     height: 2px;
                     position: absolute;
                     right: 0;
-                    
+
                     transition: width .5s;
                     &:after, &:before{
                         position: absolute;
@@ -171,15 +171,17 @@ body.home{
             }
         }
         div.button-group.closed{
-            transform: translateY(0);
+            transform: translateY(0%);
             transition: all 0.5s;
         }
         div.menu-card-wrapper.scolled{
-            padding-top: 194px;
+            /*padding-top: 194px;*/
+            margin-top: 177px;
 
         }
         div.menu-card-wrapper.onarrange{
-            padding-top: 480px;
+            /*padding-top: 296px;*/
+            margin-top: 300px;
         }
         div.menu-card-wrapper{
             position: relative;
@@ -452,9 +454,9 @@ body.home{
             font-size: 25px;
             border: 1px solid #fff;
             border-radius: 0px;
-            background-color: #000;
-            color: #FFF;
-            display:none;
+            background-color: #fff;
+            color: #000;
+            display: none;
             span.ion-android-search{
                 position: absolute;
                 left: 0;
@@ -488,6 +490,49 @@ body.home{
             border: none;
             /* border-right-style: none; */
             border-radius: 0;
+        }
+    }
+    div.search-result{
+        position: fixed;
+        top: 56px;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        min-height: 100%;
+        z-index: 99;
+        /* transform: translateY(-156px); */
+        animation: slidedown 1s;
+        margin: 0 auto;
+        padding: 10px;
+
+        span.ionicon{
+            float: right;
+            font-size: 30px;
+            color: #000;
+            margin-right: 10px;
+            /*border: 1px solid;*/
+            padding: 5px 10px;
+            &:after{
+                content: '';
+                clear: both;
+            }
+        }
+
+    }
+    div.search-result.slideUp{
+        transform: translateY(-156px);
+    }
+    @keyframes slidedown {
+        0% {
+            opacity: 0;
+            transform: translateY(-156px);
+        }
+        100% {
+            opacity: 0.9;
+            transform: translateY(0);
         }
     }
 }
