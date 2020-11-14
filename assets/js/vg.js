@@ -141,13 +141,13 @@
         });
         var $firstSearch = false;
         /* Search Form */
-        $('form.search-form').on('submit',function(e){
+        $('form.search-form').on('submit', function (e) {
             e.preventDefault();
             return false;
         });
-        $('input.quicksearch').keyup(function(){
+        $('input.quicksearch').keyup(function () {
             $firstSearch = true;
-            
+
 //            e.preventDefault();
             if ($('div.search-result')) {
                 $('div.search-result').remove();
@@ -155,20 +155,33 @@
             var $searchResultContainer = $("<div/>", {"class": "search-result container"});
             var $searchResult = $("<div/>", {"class": " row"});
             var $searchClose = $("<span/>", {"class": "ionicon ion-ios-close-outline"});
+            var $endLine = $("<hr>");
 
             var $html = '';
             $term = $.trim($('#myInput').val());
             $filter = $term.toUpperCase();
-            console.log($filter);
+//            console.log($filter);
             $('span.aliment-title').each(function (index) {
                 $txtValue = $(this).text();
                 if ($txtValue.toUpperCase().indexOf($filter) > -1) {
                     $html += $(this).parent().closest('div.desc')[0].outerHTML;
+                } else {
+                    $textDeepTitle = $(this).parent().closest('div.aliment-details-wrapper').prev().text();
+                    console.log($textDeepTitle);
+                    if ($textDeepTitle.toUpperCase().indexOf($filter) > -1) {
+                        $html += $(this).parent().closest('div.desc')[0].outerHTML;
+                    } else {
+                        $textChildTitle = $(this).parent().closest('div.aliment-details-wrapper').prev().prev().text();
+                        if($textChildTitle.toUpperCase().indexOf($filter) > -1){
+//                        $html += $(this).parent().closest('div.desc')[0].outerHTML;    
+                        }
+                        
+                    }
                 }
             });
             console.log($firstSearch);
-            if($firstSearch){
-                $searchResultContainer.css("animation","none");
+            if ($firstSearch) {
+                $searchResultContainer.css("animation", "none");
             }
             $searchResultContainer.append($searchResult.html($html));
             $('header.site-header').append($searchResultContainer);

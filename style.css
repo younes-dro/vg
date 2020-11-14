@@ -902,18 +902,55 @@ body.home div.search-result {
   animation: slidedown 1s;
   margin: 0 auto;
   padding: 10px;
+  padding-bottom: 24px;
+  padding-top: 10px;
+}
+body.home div.search-result > div.row {
+  height: 90%;
+  overflow-y: scroll;
+  box-shadow: 1px 1px 2px #000;
+  padding: 5px 10px;
+  border: 1px solid #FFF;
 }
 body.home div.search-result span.ionicon {
   float: right;
   font-size: 30px;
   color: #000;
   margin-right: 10px;
-  /*border: 1px solid;*/
   padding: 5px 10px;
 }
-body.home div.search-result span.ionicon:after {
-  content: "";
-  clear: both;
+body.home div.search-result div.desc {
+  margin-bottom: 10px;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #e0caa6;
+}
+body.home div.search-result div.desc div.txt p {
+  margin-bottom: 0px;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+body.home div.search-result div.desc div.txt span.aliment-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+body.home div.search-result div.desc div.txt span.aliment-price {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  background: url(assets/images/price-dot.gif) repeat-x 0 10px;
+}
+body.home div.search-result div.desc div.txt span.aliment-price span.amount {
+  position: relative;
+  top: -3px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #322822;
+  font-size: 18px;
+  line-height: 1;
+  font-family: Georgia, serif;
 }
 body.home div.search-result.slideUp {
   transform: translateY(-156px);
