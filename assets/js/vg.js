@@ -79,7 +79,7 @@
                 {
                     'id': 'collapse-container',
                     'class': 'collapse-container',
-                    'html': '<span></span>'}
+                    'html': '<span class="ionicon ion-android-apps"></span>'}
         );
         $('.button-group').append(collapse);
         $(window).scroll(function () {
