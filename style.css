@@ -4,7 +4,7 @@ Theme Name: VG VIZIGAN Restaurant
 Theme URI: https://github.com/younes-dro/
 Description: Custom theme for VIZIGAN Restaurant-café
 Author: Younés DRO
-Author URI: http://www.dro.123.fr
+Author URI: https://github.com/younes-dro/
 Template: dro-caterer
 Version: 1.0.0
 Text Domain: vg
@@ -412,6 +412,11 @@ body.home {
 }
 body.home header.site-header {
   height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 @media screen and (min-width: 992px) {
   body.home header.site-header {
@@ -566,10 +571,11 @@ body.home div.site-content div.button-group div.collapse-container.show {
 body.home div.site-content div.button-group.closed {
   transform: translateY(0%);
   transition: all 0.5s;
+  top: 54px;
 }
 body.home div.site-content div.menu-card-wrapper.scolled {
-  /*padding-top: 194px;*/
-  margin-top: 177px;
+  padding-top: 110px;
+  /*margin-top: 177px;*/
 }
 body.home div.site-content div.menu-card-wrapper.onarrange {
   /*padding-top: 296px;*/
@@ -624,7 +630,7 @@ body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .chi
 }
 body.home div.site-content div.menu-card-wrapper div.menu-card div.col-menu .child-cat-title span {
   position: relative;
-  z-index: 1;
+  /*z-index: 1;*/
   padding-right: 15px;
   background: #fff;
 }
@@ -709,16 +715,16 @@ body.home div.site-content div.menu-card-wrapper div.menu-card div.aliment-detai
 }
 body.home .sticky-menu-nav {
   position: fixed;
-  top: 0;
+  top: 60px;
   right: 0;
   width: 100%;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  z-index: 9999;
+  z-index: 1;
   margin: 0 auto !important;
   padding-top: 20px;
   padding-bottom: 20px;
-  /*animation:slide-down 0.7s;*/
+  /* animation: slide-down 0.7s; */
   transform: translateY(-96%);
 }
 @media screen and (min-width: 992px) {
