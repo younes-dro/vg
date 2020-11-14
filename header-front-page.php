@@ -26,7 +26,7 @@
             <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'vg'); ?></a>
             <header id="masthead" class="site-header">
                 <form class="search-form">
-                <input minlength="3" type="text" id="myInput" class="quicksearch" placeholder="Recherche...">
+                    <input autocomplete="off" minlength="3" type="text" id="myInput" class="quicksearch" placeholder="Recherche...">
                 <a href="#" class="btn btn-sm btn-default"><span class="ionicon ion-ios-search"></span> </a>
                 </form>
                 <nav id="site-navigation" class="main-navigation sticky-active" role="navigation">
