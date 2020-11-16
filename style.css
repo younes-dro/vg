@@ -772,6 +772,9 @@ body.home footer.site-footer ul.phone-numbers li a span.phone-number {
   font-size: 20px;
   padding-left: 10px;
 }
+body.home footer.site-footer div.copyright {
+  padding: 10px 0px;
+}
 body.home a.scrollup {
   position: fixed;
   width: 50px;
