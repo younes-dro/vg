@@ -22,7 +22,7 @@
         <div class="col-12 col-md-1"></div>
     </div>
 </div>-->
-<!--<div class="container-fluid adresse-wrapper" id="adresse">
+<div class="container-fluid adresse-wrapper" id="adresse">
     <div class="row">
         <div class="col-12 col-md-1"></div>
         <div class="col-12 col-md-6">
@@ -36,7 +36,7 @@
         </div>
         <div class="col-12 col-md-1"></div>
     </div>
-</div>-->
+</div>
 </div><!-- #content -->
 
 <footer id="contact" class="site-footer">
@@ -45,6 +45,9 @@
 
             <div class="col-12">
                 <?php echo list_phones(); ?>
+            </div>
+            <div class="col-12 sharing">
+                <?php echo do_shortcode('[Sassy_Social_Share]') ?>
             </div>
 
         </div><!-- ./row justify-content-center -->

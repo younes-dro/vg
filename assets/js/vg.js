@@ -129,6 +129,7 @@
             return false;
         });
 
+        // Scroll to Adresse maps
 
         /* Modal */
         $("body").on("click", "ul.menu a", function (e) {
@@ -136,8 +137,20 @@
             e.preventDefault();
 
             $linkTo = $(this).attr('href');
-            console.log($linkTo);
-            $($linkTo + 'Form').modal("show");
+//            console.log($linkTo);
+            if ($linkTo.indexOf('contact') > -1) {
+                $($linkTo + 'Form').modal("show");
+                return false;
+            } else {
+                if ($linkTo.indexOf('adresse') > -1) {
+                    $("html, body").animate({scrollTop: $($linkTo).offset().top}, 200);
+                    return false;
+                }else{
+                    $("html, body").animate({scrollTop: 0}, 200);
+                    return false;
+                }
+            }
+
         });
         var $firstSearch = false;
         /* Search Form */
@@ -172,14 +185,14 @@
                         $html += $(this).parent().closest('div.desc')[0].outerHTML;
                     } else {
                         $textChildTitle = $(this).parent().closest('div.aliment-details-wrapper').prev().prev().text();
-                        if($textChildTitle.toUpperCase().indexOf($filter) > -1){
+                        if ($textChildTitle.toUpperCase().indexOf($filter) > -1) {
 //                        $html += $(this).parent().closest('div.desc')[0].outerHTML;    
                         }
-                        
+
                     }
                 }
             });
-            console.log($firstSearch);
+//            console.log($firstSearch);
             if ($firstSearch) {
                 $searchResultContainer.css("animation", "none");
             }
@@ -200,7 +213,7 @@
             var $html = '';
             $term = $.trim($('#myInput').val());
             $filter = $term.toUpperCase();
-            console.log($filter);
+//            console.log($filter);
             $('span.aliment-title').each(function (index) {
                 $txtValue = $(this).text();
                 if ($txtValue.toUpperCase().indexOf($filter) > -1) {

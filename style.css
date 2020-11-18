@@ -294,14 +294,15 @@ span.left {
 }
 
 body.home .wp_mm_wrapper ul.menu img.custom-logo {
-  max-width: 60px;
-  margin: 36px auto;
-  /* width: 67px; */
+  max-width: 45px;
+  margin: 16px auto;
+  width: 45px;
   text-align: center;
   display: block;
-  border-radius: 17%;
-  background-color: black;
-  padding: 5px;
+  border-top-left-radius: 35%;
+  background-color: #9f1400;
+  padding: 3px;
+  border-bottom-right-radius: 35%;
 }
 body.home .wp_mm_wrapper div.commande-wrapper {
   background-color: transparent;
@@ -311,8 +312,8 @@ body.home .wp_mm_wrapper div.commande-wrapper h5 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 10px 5px;
-  font-size: 1rem;
+  padding: 0px 5px;
+  font-size: 14px;
 }
 body.home .wp_mm_wrapper div.commande-wrapper ul.phone-numbers {
   border: none;
@@ -772,6 +773,9 @@ body.home footer.site-footer ul.phone-numbers li a span.phone-number {
   font-size: 20px;
   padding-left: 10px;
 }
+body.home footer.site-footer div.sharing {
+  padding-top: 20px;
+}
 body.home footer.site-footer div.copyright {
   padding: 10px 0px;
 }
@@ -940,6 +944,18 @@ body.home div.search-result.slideUp {
     opacity: 0.9;
     transform: translateY(0);
   }
+}
+body.home div.adresse-wrapper h1 {
+  color: #a96b08;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+body.home div.adresse-wrapper h3 {
+  color: #a96b08;
+}
+body.home div.adresse-wrapper h5 {
+  color: #5b3c0a;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

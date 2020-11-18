@@ -239,14 +239,15 @@ span.left{
 body.home{
     .wp_mm_wrapper{
         ul.menu img.custom-logo{
-            max-width: 60px;
-            margin: 36px auto;
-            /* width: 67px; */
+            max-width: 45px;
+            margin: 16px auto;
+            width: 45px;
             text-align: center;
             display: block;
-            border-radius: 17%;
-            background-color: black;
-            padding: 5px;
+            border-top-left-radius: 35%;
+            background-color: #9f1400;
+            padding: 3px;
+            border-bottom-right-radius: 35%;
         }
         div.commande-wrapper{
             background-color: transparent;
@@ -255,8 +256,8 @@ body.home{
                 width: 100%;
                 margin: 0 auto;
                 text-align: center;
-                padding: 10px 5px;
-                font-size: 1rem;
+                padding: 0px 5px;
+                font-size: 14px;
             }
             ul.phone-numbers{
                 border: none;

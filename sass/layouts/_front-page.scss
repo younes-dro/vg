@@ -371,7 +371,9 @@ body.home{
                 }
             }
         }
-        
+        div.sharing{
+            padding-top: 20px;
+        }
         div.copyright{
             padding: 10px 0px;
         }
@@ -549,6 +551,21 @@ body.home{
         100% {
             opacity: 0.9;
             transform: translateY(0);
+        }
+    }
+
+    div.adresse-wrapper{
+        h1{
+            color: #a96b08;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        h3{
+            color: #a96b08;
+        }
+        h5{
+            color: #5b3c0a;
+            font-size: 1rem;
         }
     }
 }
